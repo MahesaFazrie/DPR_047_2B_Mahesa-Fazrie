@@ -90,3 +90,1141 @@ WHERE `username` = :username:
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:24:25 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:24:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/doLogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:24:29 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:24:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/doLogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:29:25 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:29:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/doLogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:29:35 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:29:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/doLogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:31:47 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:31:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:32:23 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:32:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:32:32 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:32:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:34:34 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:34:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/doLogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:36:05 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:36:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:36:06 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:36:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:39:07 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:39:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:39:17 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:39:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:45:39 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:45:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:45:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:45:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/doLogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:46:26 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:46:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:47:12 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:47:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:47:35 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:47:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:47:37 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:47:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:48:13 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:48:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:48:58 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:48:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/doLogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:49:07 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->index()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:49:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: anggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `anggota_dpr`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Anggota.php(8): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:52:49 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `an...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(27): CodeIgniter\Model->insert(Array)
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->store()
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `an...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Anggota.php(27): CodeIgniter\Model->insert(Array)
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Anggota->store()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+CRITICAL - 2025-10-01 08:52:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: anggota/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `anggota_dpr` (`gelar_depan`, `nama_depan`, `nama_belakang`, `gelar_belakang`, `jabatan`, `status_pernikahan`, `jumlah_anak`) VALUES (:gelar_depan:, :nama_depan:, :nama_belakang:, :gelar_belakang:, :jabatan:, :status_pernikahan:, :jumlah_anak:)', [...], false)
+ 3 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\Anggota.php(27): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Anggota->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Anggota))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')

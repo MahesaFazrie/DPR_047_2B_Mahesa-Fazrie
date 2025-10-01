@@ -32,7 +32,7 @@ CI_ENVIRONMENT = development
 #--------------------------------------------------------------------
 
 # database.default.hostname = localhost
-# database.default.database = ci4
+# database.default.database = proyek_3-gaji_dpr
 # database.default.username = root
 # database.default.password = root
 # database.default.DBDriver = MySQLi
