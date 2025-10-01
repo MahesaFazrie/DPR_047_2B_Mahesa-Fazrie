@@ -1,0 +1,92 @@
+CRITICAL - 2025-10-01 07:39:51 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/login.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\Auth.php(7): view('auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+CRITICAL - 2025-10-01 07:42:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/login.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\Auth.php(8): view('auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+CRITICAL - 2025-10-01 07:44:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/login.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\Auth.php(8): view('auth/login')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->login()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-01 08:17:03 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-01 08:17:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/doLogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
