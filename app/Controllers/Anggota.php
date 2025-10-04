@@ -27,4 +27,25 @@ class Anggota extends BaseController {
         $model->insert($data);
         return redirect()->to('/anggota');
     }
+
+    public function edit($id) {
+        $model = new AnggotaModel();
+        $data['anggota'] = $model->find($id);
+        return view('anggota/edit', $data);
+    }
+
+    public function update($id) {
+        $model = new AnggotaModel();
+        $data = [
+            'gelar_depan'       => $this->request->getPost('gelar_depan'),
+            'nama_depan'        => $this->request->getPost('nama_depan'),
+            'nama_belakang'     => $this->request->getPost('nama_belakang'),
+            'gelar_belakang'    => $this->request->getPost('gelar_belakang'),
+            'jabatan'           => $this->request->getPost('jabatan'),
+            'status_pernikahan' => $this->request->getPost('status_pernikahan'),
+            'jumlah_anak'       => $this->request->getPost('jumlah_anak'),
+        ];
+        $model->update($id, $data);
+        return redirect()->to('/anggota');
+    }
 }
