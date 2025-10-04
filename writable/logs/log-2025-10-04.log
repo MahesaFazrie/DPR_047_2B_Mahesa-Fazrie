@@ -49,3 +49,364 @@ FROM `anggota_dpr`', [], false)
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+CRITICAL - 2025-10-04 16:11:36 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: anggota]
+in APPPATH\Controllers\Anggota.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\app\\Controllers\\Anggota.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Anggota')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Anggota')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Anggota', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+CRITICAL - 2025-10-04 16:11:37 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: anggota]
+in APPPATH\Controllers\Anggota.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\app\\Controllers\\Anggota.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Anggota')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Anggota')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Anggota', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+CRITICAL - 2025-10-04 16:21:08 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 111.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:21:09 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 111.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:21:32 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: logout]
+in APPPATH\Config\Filters.php on line 111.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:21:32 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: logout]
+in APPPATH\Config\Filters.php on line 111.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:21:38 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: anggota/create]
+in APPPATH\Config\Filters.php on line 111.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:21:39 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: anggota/create]
+in APPPATH\Config\Filters.php on line 111.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:22:18 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: anggota/create]
+in APPPATH\Config\Filters.php on line 111.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:22:21 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 111.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:22:22 --> ErrorException: Cannot redeclare Config\Filters::$aliases
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 111.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2025-10-04 16:24:46 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-04 16:24:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/doLogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-04 16:24:53 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-04 16:24:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/doLogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+CRITICAL - 2025-10-04 16:27:32 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: anggota]
+in APPPATH\Controllers\Anggota.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\app\\Controllers\\Anggota.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Anggota')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Anggota')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Anggota', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+CRITICAL - 2025-10-04 16:34:07 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: anggota]
+in APPPATH\Controllers\Anggota.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\app\\Controllers\\Anggota.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Anggota')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Anggota')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Anggota', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+ERROR - 2025-10-04 16:34:20 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'proyek_3-gaji_d...', 3306, '', 0)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\BaseModel.php(715): CodeIgniter\Model->doFirst()
+#5 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\app\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+#6 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+#7 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\Tugas Mahesa Fazrie\Codingan\php\CI4 ETS\system\rewrite.php(44): require_once('F:\\Tugas Mahesa...')
+#13 {main}
+CRITICAL - 2025-10-04 16:34:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: auth/doLogin]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Auth.php(12): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+CRITICAL - 2025-10-04 16:34:28 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: anggota/create]
+in APPPATH\Controllers\Anggota.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\app\\Controllers\\Anggota.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Anggota')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Anggota')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Anggota', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+CRITICAL - 2025-10-04 16:34:30 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: anggota/create]
+in APPPATH\Controllers\Anggota.php on line 54.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\app\\Controllers\\Anggota.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Anggota')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Anggota')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Anggota', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\Tugas Mahesa Fazrie\\Codingan\\php\\CI4 ETS\\public\\index.php')
+CRITICAL - 2025-10-04 16:36:37 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: anggota]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:36:40 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:36:41 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:37:09 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:37:23 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:37:27 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:37:27 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:38:14 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:39:51 --> Error: Object of class CodeIgniter\Router\RouteCollection could not be converted to string
+[Method: CLI, Route: serve]
+in APPPATH\Config\Routes.php on line 12.
+ 1 SYSTEMPATH\Router\RouteCollection.php(339): require()
+ 2 SYSTEMPATH\CLI\Console.php(41): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 3 SYSTEMPATH\Boot.php(388): CodeIgniter\CLI\Console->run()
+ 4 SYSTEMPATH\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 5 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2025-10-04 16:41:36 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:41:38 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:41:38 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:41:39 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:42:19 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:42:33 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:42:34 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:42:35 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:42:35 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:42:36 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:42:36 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:43:14 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
