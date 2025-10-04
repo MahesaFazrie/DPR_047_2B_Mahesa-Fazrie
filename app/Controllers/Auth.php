@@ -1,51 +1,70 @@
 <?php
+
 namespace App\Controllers;
-use App\Models\PenggunaModel;
+
+use App\Controllers\BaseController;
+use App\Models\PenggunaModel; // Pastikan model PenggunaModel di-load
 
 class Auth extends BaseController
 {
+    // Pastikan session dan helper dimuat di BaseController atau di sini
     public function login()
     {
-        return view('auth/login');
-    }
+        // Jika sudah login, redirect ke halaman utama sesuai role
+        if (session()->get('isLoggedIn')) {
+            return redirect()->to(base_url('/'));
+        }
 
-    public function doLogin()
-    {
-        $session = session();
-        $userModel = new PenggunaModel();
+        helper(['form']);
+        $data = [];
 
-        $username = $this->request->getVar('username');
-        $password = $this->request->getVar('password');
+        if ($this->request->getMethod() === 'post') {
+            $username = $this->request->getPost('username');
+            $password = $this->request->getPost('password');
 
-        $user = $userModel->where('username', $username)->first();
+            // 1. Ambil data pengguna dari database
+            $model = new PenggunaModel();
+            $user  = $model->findUserByUsername($username);
 
-        if ($user) {
-            if (password_verify($password, $user['password'])) {
-                // Simpan sesi login
-                $session->set([
-                    'id_pengguna' => $user['id_pengguna'],
-                    'username'    => $user['username'],
-                    'nama'        => $user['nama_depan'].' '.$user['nama_belakang'],
-                    'role'        => $user['role'],
-                    'logged_in'   => true
-                ]);
-                // Arahkan sesuai role
-                if ($user['role'] == 'Admin') {
-                    return redirect()->to('/anggota');
+            // 2. Verifikasi pengguna ditemukan
+            if ($user) {
+                // 3. Verifikasi password dengan password_verify()
+                if (password_verify($password, $user['password'])) {
+                    
+                    // Otentikasi Berhasil, buat sesi
+                    $ses_data = [
+                        'id_pengguna' => $user['id_pengguna'],
+                        'username'    => $user['username'],
+                        'nama_lengkap' => $user['nama_depan'] . ' ' . $user['nama_belakang'],
+                        'role'        => $user['role'],
+                        'isLoggedIn'  => true,
+                    ];
+                    session()->set($ses_data);
+
+                    // Redirect ke dashboard sesuai role
+                    if ($user['role'] === 'Admin') {
+                        return redirect()->to(base_url('admin/dashboard'));
+                    } else {
+                        return redirect()->to(base_url('public/dashboard'));
+                    }
                 } else {
-                    return redirect()->to('/dashboard-public');
+                    // Password salah
+                    session()->setFlashdata('error', 'Username atau **Password salah**.');
+                    return redirect()->back()->withInput();
                 }
             } else {
-                return redirect()->back()->with('error', 'Password salah!');
+                // Username tidak ditemukan
+                session()->setFlashdata('error', '**Username** atau Password salah.');
+                return redirect()->back()->withInput();
             }
-        } else {
-            return redirect()->back()->with('error', 'Username tidak ditemukan!');
         }
+
+        return view('auth/login', $data); // Tampilkan halaman login
     }
 
     public function logout()
     {
         session()->destroy();
-        return redirect()->to('/login');
+        return redirect()->to(base_url('login'));
     }
 }

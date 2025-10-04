@@ -410,3 +410,23 @@ CRITICAL - 2025-10-04 16:43:14 --> ErrorException: Type of Config\Filters::$alia
 [Method: GET, Route: login]
 in APPPATH\Config\Filters.php on line 16.
  1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:51:14 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:51:15 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:54:25 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:54:26 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-10-04 16:54:40 --> ErrorException: Type of Config\Filters::$aliases must be array (as in class CodeIgniter\Config\Filters)
+[Method: GET, Route: login]
+in APPPATH\Config\Filters.php on line 16.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
