@@ -3025,3 +3025,1908 @@ DEBUG - 2026-01-05 14:54:33 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2026-01-05 14:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-01-05 14:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2026-01-05 14:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:23:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-01-05 15:25:11 --> ErrorException: Undefined variable $anggota
+[Method: GET, Route: penggajian/create]
+in APPPATH\Views\penggajian\create.php on line 11.
+ 1 APPPATH\Views\penggajian\create.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $anggota', 'C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\app\\Views\\penggajian\\create.php', 11)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\app\\Views\\penggajian\\create.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('penggajian/create', [], true)
+ 5 APPPATH\Controllers\Penggajian.php(42): view('penggajian/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-05 15:25:27 --> mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist in C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\app\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#5 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#6 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-01-05 15:25:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:25:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:25:27 --> [Caused by] mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-05 15:25:31 --> mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist in C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\app\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#5 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#6 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-01-05 15:25:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:25:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:25:31 --> [Caused by] mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-05 15:25:49 --> mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist in C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\app\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#5 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#6 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-01-05 15:25:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:25:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:25:49 --> [Caused by] mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-05 15:26:22 --> mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist in C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\app\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#5 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#6 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-01-05 15:26:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:26:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:26:22 --> [Caused by] mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:26:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-05 15:26:48 --> mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist in C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\app\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#5 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#6 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-01-05 15:26:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:26:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:26:48 --> [Caused by] mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-05 15:27:40 --> mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist in C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\app\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#5 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#6 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-01-05 15:27:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:27:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:27:40 --> [Caused by] mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:27:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-05 15:27:41 --> mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist in C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\app\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#5 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#6 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-01-05 15:27:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:27:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:27:41 --> [Caused by] mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-05 15:27:45 --> mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist in C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\app\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#5 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#6 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-01-05 15:27:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:27:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:27:45 --> [Caused by] mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-05 15:27:50 --> mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist in C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\app\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#5 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#6 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-01-05 15:27:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:27:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:27:51 --> [Caused by] mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-05 15:27:53 --> mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist in C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\app\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#5 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#6 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-01-05 15:27:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:27:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:27:53 --> [Caused by] mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-05 15:28:33 --> mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist in C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\app\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#5 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#6 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-01-05 15:28:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:28:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:28:33 --> [Caused by] mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-01-05 15:28:37 --> mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist in C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n            S...', 0)
+#1 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n            S...')
+#2 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n            S...')
+#3 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\app\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('\r\n            S...')
+#4 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+#5 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+#6 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\Proyek 3\DPR_047_2B_Mahesa-Fazrie\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2026-01-05 15:28:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+[Method: GET, Route: penggajian]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:28:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+CRITICAL - 2026-01-05 15:28:37 --> [Caused by] mysqli_sql_exception: Table 'proyek3_dpr.komponen' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 4 APPPATH\Controllers\Penggajian.php(17): CodeIgniter\Database\BaseConnection->query('
+            SELECT 
+                a.id_anggota, 
+                a.nama_depan, 
+                a.nama_belakang, 
+                a.jabatan,
+                a.status_pernikahan,
+                SUM(CASE WHEN k.kategori = \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_gaji_pokok,
+                SUM(CASE WHEN k.kategori != \'Gaji Pokok\' THEN k.nominal ELSE 0 END) as total_tunjangan
+            FROM anggota a
+            LEFT JOIN penggajian p ON a.id_anggota = p.id_anggota
+            LEFT JOIN komponen k ON p.id_komponen = k.id_komponen
+            GROUP BY a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan, a.status_pernikahan
+        ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penggajian->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penggajian))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Proyek 3\\DPR_047_2B_Mahesa-Fazrie\\public\\index.php')
+DEBUG - 2026-01-05 15:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:29:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-01-05 15:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

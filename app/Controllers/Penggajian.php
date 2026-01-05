@@ -4,15 +4,17 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\AnggotaModel;
-use App\Models\KomponenGajiModel; // Pastikan model ini ada
+use App\Models\KomponenModel;
 
 class Penggajian extends BaseController
 {
+    // Hapus constructor yang memanggil model yang tidak ada
+
     public function index()
     {
         $db = \Config\Database::connect();
 
-        // Query Transparansi Gaji (Sama seperti sebelumnya)
+        // Query Transparansi Gaji (Disesuaikan dengan tabel 'penggajian' pivot)
         $query = $db->query("
             SELECT 
                 a.id_anggota, 
@@ -33,11 +35,11 @@ class Penggajian extends BaseController
         ]);
     }
 
-    // Method baru untuk menampilkan Form
     public function create()
     {
+        // Panggil Model Anggota & Komponen langsung
         $anggotaModel = new AnggotaModel();
-        $komponenModel = new KomponenGajiModel();
+        $komponenModel = new KomponenModel();
 
         return view('penggajian/create', [
             'anggota_list'  => $anggotaModel->findAll(),
@@ -45,34 +47,34 @@ class Penggajian extends BaseController
         ]);
     }
 
-    // Method baru untuk Menyimpan Data
     public function store()
     {
         $idAnggota = $this->request->getPost('id_anggota');
-        $komponenIds = $this->request->getPost('komponen'); // Ini array (checkbox)
+        $komponenIds = $this->request->getPost('komponen'); // Array
 
-        // Validasi sederhana
         if (!$idAnggota || empty($komponenIds)) {
-            return redirect()->back()->withInput()->with('error', 'Harap pilih Anggota dan minimal satu Komponen Gaji.');
+            return redirect()->back()->withInput()->with('error', 'Pilih Anggota dan minimal satu Komponen.');
         }
 
         $db = \Config\Database::connect();
         
-        // 1. Bersihkan gaji lama anggota ini (agar tidak duplikat saat di-update)
+        // 1. Hapus data lama (Reset gaji anggota tersebut)
         $db->table('penggajian')->where('id_anggota', $idAnggota)->delete();
 
-        // 2. Siapkan data baru untuk di-insert
+        // 2. Siapkan data baru
         $dataInsert = [];
         foreach ($komponenIds as $idKomponen) {
             $dataInsert[] = [
                 'id_anggota'       => $idAnggota,
-                'id_komponen_gaji' => $idKomponen
+                'id_komponen_gaji' => $idKomponen // Sesuai nama kolom di DB
             ];
         }
 
-        // 3. Masukkan data (Insert Batch)
+        // 3. Simpan
         $db->table('penggajian')->insertBatch($dataInsert);
 
-        return redirect()->to('/penggajian')->with('success', 'Komponen gaji berhasil diatur!');
+        return redirect()->to('/penggajian')->with('success', 'Gaji berhasil disimpan!');
     }
+    
+    // Hapus function detail() dan komponenByJabatan() yang bikin error sementara ini
 }
