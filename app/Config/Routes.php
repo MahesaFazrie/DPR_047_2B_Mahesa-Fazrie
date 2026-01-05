@@ -27,6 +27,10 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
     $routes->get('/komponen/edit/(:num)', 'Komponen::edit/$1');
     $routes->post('/komponen/update/(:num)', 'Komponen::update/$1');
     $routes->get('/komponen/delete/(:num)', 'Komponen::delete/$1');
+    $routes->get('/penggajian', 'Penggajian::index');
+    $routes->get('/penggajian/create', 'Penggajian::create');
+    $routes->post('/penggajian/store', 'Penggajian::store');
+    $routes->get('/penggajian/detail/(:num)', 'Penggajian::detail/$1');
 
 
 });
