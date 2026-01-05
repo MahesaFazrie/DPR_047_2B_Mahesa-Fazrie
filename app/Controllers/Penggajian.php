@@ -24,12 +24,22 @@ class Penggajian extends BaseController
 
         $query = $db->query("
             SELECT a.id_anggota, a.nama_depan, a.nama_belakang, a.jabatan,
-                   SUM(
-                       CASE 
-                           WHEN k.satuan = 'Tahunan' THEN k.nominal / 12
-                           ELSE k.nominal
-                       END
-                   ) AS take_home_pay
+                SUM(
+                    CASE
+                        WHEN k.nama_komponen = 'Tunjangan Istri/Suami'
+                            AND a.status_pernikahan = 'Kawin'
+                        THEN k.nominal
+
+                        WHEN k.nama_komponen = 'Tunjangan Anak'
+                            AND a.jumlah_anak > 0
+                        THEN k.nominal * LEAST(a.jumlah_anak, 2)
+
+                        WHEN k.satuan = 'Tahunan'
+                        THEN k.nominal / 12
+
+                        ELSE k.nominal
+                    END
+                )
             FROM penggajian p
             JOIN anggota_dpr a ON p.id_anggota = a.id_anggota
             JOIN penggajian_detail pd ON p.id_penggajian = pd.id_penggajian
@@ -82,4 +92,14 @@ class Penggajian extends BaseController
             'data' => $query->getResultArray()
         ]);
     }
+    
+    public function komponenByJabatan($jabatan)
+    {
+        return $this->response->setJSON(
+            $this->komponen
+                ->whereIn('jabatan', [$jabatan, 'Semua'])
+                ->findAll()
+        );
+    }
+
 }

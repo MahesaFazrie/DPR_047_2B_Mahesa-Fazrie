@@ -31,6 +31,12 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
     $routes->get('/penggajian/create', 'Penggajian::create');
     $routes->post('/penggajian/store', 'Penggajian::store');
     $routes->get('/penggajian/detail/(:num)', 'Penggajian::detail/$1');
+    $routes->get('/penggajian/komponen/(:segment)', 'Penggajian::komponenByJabatan/$1');
+    $routes->group('', ['filter' => 'role:admin'], function($routes) {
+        $routes->get('/anggota', 'Anggota::index');
+        $routes->get('/komponen', 'Komponen::index');
+        $routes->get('/penggajian', 'Penggajian::index');
+    });
 
 
 });

@@ -31,6 +31,39 @@
 
 <button class="btn btn-success">Simpan</button>
 <a href="/penggajian" class="btn btn-secondary">Kembali</a>
+
 </form>
+<select id="anggota" name="id_anggota" class="form-select">
+<?php foreach ($anggota as $a): ?>
+<option value="<?= $a['id_anggota'] ?>" data-jabatan="<?= $a['jabatan'] ?>">
+    <?= $a['nama_depan'].' '.$a['nama_belakang'].' - '.$a['jabatan'] ?>
+</option>
+<?php endforeach ?>
+</select>
+
+<div id="komponen-area" class="mt-3"></div>
+
+<script>
+document.getElementById('anggota').addEventListener('change', function(){
+    let jabatan = this.selectedOptions[0].dataset.jabatan;
+
+    fetch('/penggajian/komponen/' + jabatan)
+        .then(res => res.json())
+        .then(data => {
+            let html = '';
+            data.forEach(k => {
+                html += `
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="komponen[]" value="${k.id_komponen}">
+                    <label class="form-check-label">
+                        ${k.nama_komponen} (${k.jabatan})
+                    </label>
+                </div>`;
+            });
+            document.getElementById('komponen-area').innerHTML = html;
+        });
+});
+</script>
+
 
 <?= view('layout/footer') ?>
