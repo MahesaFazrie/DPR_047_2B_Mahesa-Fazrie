@@ -1,3 +1,6 @@
-<h2>Selamat datang di Halaman Publik!</h2>
-<p>Hanya pengguna dengan role Public yang dapat melihat halaman ini.</p>
-<a href="/logout">Logout</a>
+<?= view('layout/header', ['title' => 'Dashboard']) ?>
+
+<h3>Dashboard</h3>
+<p>Login berhasil.</p>
+
+<?= view('layout/footer') ?>

@@ -24,7 +24,7 @@ class Filters extends BaseFilters
      * [filter_name => classname]
      * or [filter_name => [classname1, classname2, ...]]
      */
-    public $aliases = [
+    public array $aliases = [
         'csrf'          => CSRF::class,
         'toolbar'       => DebugToolbar::class,
         'honeypot'      => Honeypot::class,

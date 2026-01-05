@@ -12,7 +12,7 @@
       <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
     <?php endif; ?>
 
-    <form method="post" action="/auth/doLogin">
+    <form method="post" action="/login">
       <div class="mb-3">
         <label>Username</label>
         <input type="text" name="username" class="form-control" required autofocus>
