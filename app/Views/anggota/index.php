@@ -19,7 +19,7 @@
             <th>Nama Lengkap</th>
             <th>Jabatan</th>
             <th>Status</th>
-            <th>Jumlah Anak</th>
+            <!-- <th>Jumlah Anak</th> -->
             <th width="150">Aksi</th>
         </tr>
     </thead>
@@ -32,7 +32,7 @@
             </td>
             <td><?= $a['jabatan'] ?></td>
             <td><?= $a['status_pernikahan'] ?></td>
-            <td><?= $a['jumlah_anak'] ?></td>
+            
             <td>
                 <a href="/anggota/edit/<?= $a['id_anggota'] ?>" class="btn btn-warning btn-sm">Edit</a>
                 <a href="/anggota/delete/<?= $a['id_anggota'] ?>"

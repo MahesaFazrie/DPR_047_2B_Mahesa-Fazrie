@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 
 class AnggotaModel extends Model
 {
-    protected $table = 'anggota_dpr';
+    protected $table = 'anggota';
     protected $primaryKey = 'id_anggota';
 
     protected $allowedFields = [
@@ -14,7 +14,7 @@ class AnggotaModel extends Model
         'nama_belakang',
         'gelar_belakang',
         'jabatan',
-        'status_pernikahan',
-        'jumlah_anak'
+        'status_pernikahan'
+        // 'jumlah_anak'
     ];
 }

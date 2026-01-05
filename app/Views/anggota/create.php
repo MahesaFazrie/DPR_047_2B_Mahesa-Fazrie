@@ -40,10 +40,10 @@
                 <option value="Belum Kawin">Belum Kawin</option>
             </select>
         </div>
-        <div class="col">
+        <!-- <div class="col">
             <label class="form-label">Jumlah Anak</label>
             <input type="number" name="jumlah_anak" class="form-control" min="0" value="0">
-        </div>
+        </div> -->
     </div>
 
     <button class="btn btn-success">Simpan</button>

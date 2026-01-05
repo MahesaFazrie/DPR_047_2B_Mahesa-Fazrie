@@ -39,7 +39,7 @@ class Anggota extends BaseController
             'nama_depan' => 'required',
             'jabatan' => 'required',
             'status_pernikahan' => 'required',
-            'jumlah_anak' => 'required|integer'
+            // 'jumlah_anak' => 'required|integer'
         ];
 
         if (!$this->validate($rules)) {
@@ -64,7 +64,7 @@ class Anggota extends BaseController
 
     public function delete($id)
     {
-        $this->anggota->delete($id);
+        $this->anggota->where('id_anggota', $id)->delete();
         return redirect()->to('/anggota');
     }
 }
