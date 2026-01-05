@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Filters;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
@@ -13,8 +14,5 @@ class AuthFilter implements FilterInterface
         }
     }
 
-    public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
-    {
-        // tidak perlu apa-apa di sini
-    }
+    public function after(RequestInterface $request, ResponseInterface $response, $arguments = null) {}
 }
